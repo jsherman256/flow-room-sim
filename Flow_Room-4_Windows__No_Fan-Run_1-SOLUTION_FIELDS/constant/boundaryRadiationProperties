@@ -1,0 +1,66 @@
+FoamFile {
+    version 2.0;
+    format ascii;
+    class dictionary;
+    object boundaryRadiationProperties;
+}
+face9 {
+    type lookup;
+    emissivity 0.9;
+    absorptivity 0.9;
+    transmissivity 0.0;
+}
+face3 {
+    type lookup;
+    emissivity 0.9;
+    absorptivity 0.9;
+    transmissivity 0.0;
+}
+face7 {
+    type lookup;
+    emissivity 0.9;
+    absorptivity 0.9;
+    transmissivity 0.0;
+}
+face5 {
+    type lookup;
+    emissivity 0.9;
+    absorptivity 0.9;
+    transmissivity 0.0;
+}
+face2 {
+    type lookup;
+    emissivity 1.0;
+    absorptivity 1.0;
+    transmissivity 1.0;
+}
+face1 {
+    type lookup;
+    emissivity 1.0;
+    absorptivity 1.0;
+    transmissivity 1.0;
+}
+face6 {
+    type lookup;
+    emissivity 1.0;
+    absorptivity 1.0;
+    transmissivity 1.0;
+}
+face4 {
+    type lookup;
+    emissivity 1.0;
+    absorptivity 1.0;
+    transmissivity 1.0;
+}
+face8 {
+    type lookup;
+    emissivity 0.9;
+    absorptivity 0.9;
+    transmissivity 0.0;
+}
+face10 {
+    type lookup;
+    emissivity 0.9;
+    absorptivity 0.9;
+    transmissivity 0.0;
+}
