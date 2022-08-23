@@ -1,0 +1,53 @@
+FoamFile {
+    version 2.0;
+    format ascii;
+    class dictionary;
+    object fvSchemes;
+}
+ddtSchemes {
+    default steadyState;
+}
+gradSchemes {
+    default cellLimited leastSquares 1;
+    grad(U) cellLimited leastSquares 1;
+    grad(p_rgh) cellLimited leastSquares 1;
+    grad(k) cellLimited leastSquares 1;
+    grad(omega) cellLimited leastSquares 1;
+    grad(T) cellLimited leastSquares 1;
+    grad(rhok) cellLimited leastSquares 1;
+}
+divSchemes {
+    default Gauss linear;
+    div(phi,U) bounded Gauss upwind;
+    div(phi,k) bounded Gauss upwind;
+    div((nuEff*dev2(T(grad(U))))) Gauss linear;
+    div(phi,omega) bounded Gauss upwind;
+    div(phi,T) bounded Gauss upwind;
+    div(phi,T1) bounded Gauss upwind;
+}
+laplacianSchemes {
+    default Gauss linear limited corrected 0.5;
+    laplacian(nuEff,U) Gauss linear limited corrected 0.5;
+    laplacian(DkEff,k) Gauss linear limited corrected 0.5;
+    laplacian(DomegaEff,omega) Gauss linear limited corrected 0.5;
+    laplacian(DT1,T1) Gauss linear limited corrected 0.5;
+    laplacian(alphaEff,T) Gauss linear limited corrected 0.5;
+    laplacian(rAUf,p_rgh) Gauss linear limited corrected 0.5;
+}
+interpolationSchemes {
+    default linear;
+    interpolate(HbyA) linear;
+    interpolate(rAU) linear;
+}
+snGradSchemes {
+    default limited 0.5;
+    snGrad(p_rgh) limited 0.5;
+    snGrad(rhok) limited 0.5;
+}
+fluxRequired {
+    default no;
+    p_rgh ;
+}
+wallDist {
+    method meshWave;
+}

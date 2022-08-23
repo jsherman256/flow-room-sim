@@ -1,0 +1,44 @@
+FoamFile {
+    version 2.0;
+    format ascii;
+    class dictionary;
+    object changeDictionaryDict;
+}
+boundary {
+    face9 {
+        type wall;
+        inGroups (wall viewFactorWall);
+    }
+    face3 {
+        type wall;
+        inGroups (wall viewFactorWall);
+    }
+    face7 {
+        type wall;
+        inGroups (wall viewFactorWall);
+    }
+    face5 {
+        type wall;
+        inGroups (wall viewFactorWall);
+    }
+    face8 {
+        type wall;
+        inGroups (wall viewFactorWall);
+    }
+    face10 {
+        type wall;
+        inGroups (wall viewFactorWall);
+    }
+    face4 {
+        inGroups (wall viewFactorWall);
+    }
+    face6 {
+        inGroups (wall viewFactorWall);
+    }
+    face1 {
+        inGroups (wall viewFactorWall);
+    }
+    face2 {
+        inGroups (wall viewFactorWall);
+    }
+}
